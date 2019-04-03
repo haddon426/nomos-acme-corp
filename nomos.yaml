@@ -1,13 +1,13 @@
 apiVersion: addons.sigs.k8s.io/v1alpha1
-kind: Nomos
+kind: config-management
 metadata:
-  name: nomos-acme
-  namespace: nomos-system
+  name: config-management
+  namespace: config-management-system
 spec:
   enableHierarchicalResourceQuota: true
   git:
     secretType: ssh
-    syncRepo: git@github.com:linde/nomos-acme-corp.git
+    syncRepo: git@github.com:haddon426/nomos-acme-corp.git
     syncBranch: master
     policyDir: nomos-root
 
